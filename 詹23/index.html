@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>改变网页背景色</title>
+		<style type="text/css">
+		
+			p{
+				width: 2000px;
+				height: 100px;
+				background: auto;
+				text-align: center;
+			}
+			img{
+				
+				float: right;
+			}
+				
+			
+		</style>
+		</head>
+		
+		
+	<body>
+		<img src="img/thumb_940__1416640282305.jpg"/>
+		<img src="img/20180113100654_b7b50040217e553139d1d991bcf153d0_3.jpeg"/>
+		<p  style="color: red;">湖人总冠军,詹皇fmvp</p>
+	    <input type="button" value="设为黄色" onclick="color('yellow')" />
+	    <input type="button" value="设为蓝色" onclick="color('blue')" />
+	    <input type="button" value="设为自定义颜色" onclick="color('#00ff00')" />
+	</body>
+	<script  type="text/javascript">
+			function color(str) {
+				document.body.style.backgroundColor = str;
+			}
+		</script>
+</html>
