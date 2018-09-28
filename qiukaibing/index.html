@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	<style type="text/css">
+		.lbj{
+			width: 300px;
+			border: 1px solid black;
+		}
+		img{
+			width: 100%;
+		}
+		.kk{
+			position: absolute;
+			height: 150px;
+			width: 150px;
+			border: 1px solid black;
+			top: 50px;
+			left: 50px;
+			background: url(img/FE.jpg);
+	  background-position:-100px -100px ;	
+		}	
+	</style>	
+	</head>
+	<body>
+		<div class="lbj">
+			 <img src="img/FE.jpg"/>
+			<div class="kk">	
+			</div>
+		</div>
+		<script type="text/javascript">
+			var qqq=document.getElementsByClassName('lbj')[0];
+			var  ko=document.getElementsByClassName('kk')[0];
+			
+			qqq.addEventListener("mousemove",oudi);
+			function  oudi(event){
+				event=event||window.event;
+				console.log(event.pageX,event.pageY);
+				ko.style.left=event.pageX+"px";
+				ko.style.top=event.pageY+"px";
+				var cnmX=qqq.getBoundingClientRect().left-ko.getBoundingClientRect().left;
+				var cnmY=qqq.getBoundingClientRect().right-ko.getBoundingClientRect().left;
+			 	ko.style.backgroundPositionX=2.442*cnmX-75+"px";
+			    ko.style.backgroundPositionY=2.442*cnmY-75+"px";	
+			}
+			qqq.addEventListener("mouseover",move);	
+		</script>	
+	</body>
+</html>
